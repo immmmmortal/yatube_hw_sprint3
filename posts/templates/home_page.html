@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block body %}
+    {% for group in object_list %}
+        <a href="{% url 'group_page' group.id %}">
+            {{ group.title }}
+        </a>
+    {% endfor %}
+{% endblock %}

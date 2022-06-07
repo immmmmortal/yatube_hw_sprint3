@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ group.title }}
+{% endblock %}
+
+
+{% block body %}
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+{% endblock %}
