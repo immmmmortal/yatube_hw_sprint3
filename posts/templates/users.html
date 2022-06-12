@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block body %}
+    {% for user in users %}
+        <a href="{% url 'user_page' user.pk %}">{{ user.first_name }}</a>
+    {% endfor %}
+
+{% endblock %}

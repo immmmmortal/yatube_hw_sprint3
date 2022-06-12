@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block title %}
-    {{ group.title }}
+    {{ author.first_name }} page
 {% endblock %}
 
-
 {% block body %}
-    {% for post in group.posts.all %}
+
+    {% for post in object.author.all %}
+
         {{ post }}
+
     {% endfor %}
+
+
 {% endblock %}

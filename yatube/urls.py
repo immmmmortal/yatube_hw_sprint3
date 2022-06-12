@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomeView.as_view(), name='home_page'),
     path('group/<int:pk>', views.DetailedGroupView.as_view(), name='group_page'),
+    path('posts/', include('posts.urls')),
 ]

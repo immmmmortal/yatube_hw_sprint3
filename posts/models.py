@@ -20,9 +20,9 @@ class Author(User):
 
 class Post(models.Model):
     title = models.CharField(max_length=48)
-    post_image = models.ImageField()
+    post_image = models.ImageField(upload_to='images/')
     group = models.ForeignKey('Group', on_delete=models.CASCADE, null=True, blank=True, related_name='posts')
-    author = models.ForeignKey('Author', on_delete=models.CASCADE)
+    author = models.ForeignKey('Author', on_delete=models.CASCADE, related_name='author')
     added_date = models.DateTimeField(auto_created=True, blank=True, null=True)
     edited_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
