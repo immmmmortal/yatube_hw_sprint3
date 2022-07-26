@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+        <h1>login</h1>
+        <br/><br/>
+    </div>
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Login</button>
+    </form>
+
+{% endblock %}

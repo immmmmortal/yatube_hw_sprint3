@@ -1,10 +1,13 @@
 asgiref==3.5.2
 decorator==5.1.1
-Django==4.0.4
+Django==3.2.14
 integer==1.0.3
 kwargs==1.0.1
-listview==0.1.0
 Pillow==9.1.1
+py-environ==0.2.2
+python-environ==0.4.54
+pytz==2022.1
 self==2020.12.3
+six==1.16.0
 sqlparse==0.4.2
 tzdata==2022.1
